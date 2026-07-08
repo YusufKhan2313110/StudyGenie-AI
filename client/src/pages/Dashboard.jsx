@@ -13,10 +13,7 @@ function Dashboard() {
   async function handleSend(prompt) {
     const updatedMessages = [
       ...messages,
-      {
-        role: "user",
-        content: prompt,
-      },
+      { role: "user", content: prompt },
     ];
 
     setMessages(updatedMessages);
@@ -35,7 +32,7 @@ function Dashboard() {
           content: response.data.response,
         },
       ]);
-    } catch (error) {
+    } catch {
       setMessages([
         ...updatedMessages,
         {
@@ -59,6 +56,15 @@ function Dashboard() {
         />
 
         <div className="flex-1 flex flex-col">
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setMessages([])}
+              className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700"
+            >
+              Clear Chat
+            </button>
+          </div>
+
           <ChatWindow
             messages={messages}
             loading={loading}

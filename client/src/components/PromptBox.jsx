@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiSend } from "react-icons/fi";
+import { SendHorizonal } from "lucide-react";
 
 function PromptBox({ onSend, loading }) {
   const [prompt, setPrompt] = useState("");
@@ -14,29 +14,65 @@ function PromptBox({ onSend, loading }) {
     setPrompt("");
   }
 
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className="border-t border-slate-800 bg-slate-900 p-4"
-    >
-      <div className="max-w-5xl mx-auto flex gap-3">
-        <textarea
-          rows={2}
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
-          placeholder="Ask anything..."
-          className="flex-1 resize-none rounded-xl bg-slate-800 p-4 outline-none"
-        />
+  function handleKeyDown(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="px-6 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50"
-        >
-          <FiSend size={22} />
-        </button>
-      </div>
-    </form>
+      handleSubmit(e);
+    }
+  }
+
+  return (
+    <div className="border-t border-slate-800 bg-slate-950/80 backdrop-blur-xl px-8 py-6">
+
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-6xl mx-auto"
+      >
+
+        <div className="rounded-3xl border border-slate-700 bg-slate-900 shadow-2xl transition focus-within:border-blue-500">
+
+          <textarea
+            rows={3}
+            value={prompt}
+            disabled={loading}
+            onChange={(e) => setPrompt(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Ask StudyGenie anything... (Shift + Enter for a new line)"
+            className="min-h-[110px] w-full resize-none rounded-t-3xl bg-transparent px-7 py-6 text-lg text-white placeholder:text-slate-500 outline-none"
+          />
+
+          <div className="flex items-center justify-between border-t border-slate-800 px-6 py-4">
+
+            <p className="text-sm text-slate-500">
+              {prompt.length} characters
+            </p>
+
+            <button
+              type="submit"
+              disabled={loading || !prompt.trim()}
+              className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-600 to-violet-600 px-7 py-3 font-semibold text-white shadow-lg transition duration-300 hover:scale-105 disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {loading ? (
+                <>
+                  Thinking...
+                </>
+              ) : (
+                <>
+                  Send
+
+                  <SendHorizonal size={18} />
+                </>
+              )}
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
   );
 }
 

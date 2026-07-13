@@ -9,9 +9,9 @@
   <img src="https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker" />
 </p>
 
-A modern **AI-powered study assistant** that helps students learn smarter using **Google Gemini AI**. Generate summaries, quizzes, flashcards, explanations, and chat with an intelligent AI tutor through a clean and responsive web interface.
-
-Developed as part of the **IBM CSRBOX GenAI Vibe Coding Internship Project**.
+<p align="center">
+A modern AI-powered study assistant built with React, Node.js, Express, and Google Gemini.
+</p>
 
 ---
 
@@ -19,11 +19,11 @@ Developed as part of the **IBM CSRBOX GenAI Vibe Coding Internship Project**.
 
 ### 🌐 Frontend
 
-**https://study-genie-ai-orpin.vercel.app/**
+https://study-genie-ai-orpin.vercel.app/
 
 ### ⚙️ Backend API
 
-**https://studygenie-backend-q6tk.onrender.com**
+https://studygenie-backend-q6tk.onrender.com
 
 ---
 
@@ -34,29 +34,54 @@ Developed as part of the **IBM CSRBOX GenAI Vibe Coding Internship Project**.
 - ❓ Quiz Generator
 - 🧠 Flashcard Generator
 - 💡 AI Concept Explainer
-- ⚡ Fast Gemini-powered responses
-- 📱 Fully Responsive UI
-- 🎨 Modern Dashboard Interface
-- 🔒 Secure Backend API (Environment Variables)
-- 🐳 Docker Containerization
-- ☁️ Cloud Deployment (Vercel + Render)
+- ⚡ Gemini 2.5 Flash Integration
+- 📱 Fully Responsive Design
+- 🔒 Secure Backend API
+- 🐳 Docker Support
+- ☁️ Cloud Deployment
 - 🚀 AWS Ready
 
 ---
 
 # 📸 Application Preview
 
-| Landing Page | Workspace |
-|--------------|-----------|
-| ![](screenshots/landing-page.png) | ![](screenshots/workspace.png) |
+## Landing Page
 
-| AI Chat | Notes Summarizer |
-|---------|------------------|
-| ![](screenshots/chat.png) | ![](screenshots/summary.png) |
+<p align="center">
+<img src="./screenshots/landing-page.png" width="900">
+</p>
 
-| Quiz Generator |
-|----------------|
-| ![](screenshots/quiz.png) |
+---
+
+## Workspace
+
+<p align="center">
+<img src="./screenshots/workspace.png" width="900">
+</p>
+
+---
+
+## AI Chat Assistant
+
+<p align="center">
+<img src="./screenshots/chat.png" width="900">
+</p>
+
+---
+
+## Notes Summarizer
+
+<p align="center">
+<img src="./screenshots/summary.png" width="900">
+</p>
+
+---
+
+## Quiz Generator
+
+<p align="center">
+<img src="./screenshots/quiz.png" width="900">
+</p>
 
 ---
 
@@ -70,32 +95,24 @@ Developed as part of the **IBM CSRBOX GenAI Vibe Coding Internship Project**.
 - React Router
 - Axios
 - React Markdown
-- React Hot Toast
 - Lucide React
-
----
+- React Hot Toast
 
 ## Backend
 
 - Node.js
 - Express.js
-- CORS
 - dotenv
-
----
+- CORS
 
 ## AI
 
 - Google Gemini 2.5 Flash API
 
----
-
 ## Deployment
 
-- Vercel (Frontend)
-- Render (Backend)
-
----
+- Vercel
+- Render
 
 ## Containerization
 
@@ -104,24 +121,14 @@ Developed as part of the **IBM CSRBOX GenAI Vibe Coding Internship Project**.
 
 ---
 
-# 📁 Project Structure
+# 📁 Folder Structure
 
-```
+```text
 StudyGenie-AI/
 │
 ├── client/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── Dockerfile
-│
 ├── server/
-│   ├── routes/
-│   ├── services/
-│   ├── prompts/
-│   ├── package.json
-│   └── Dockerfile
-│
+├── screenshots/
 ├── docker-compose.yml
 ├── README.md
 └── .gitignore
@@ -131,7 +138,7 @@ StudyGenie-AI/
 
 # ⚙️ Installation
 
-## 1. Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/YusufKhan2313110/StudyGenie-AI.git
@@ -141,21 +148,19 @@ cd StudyGenie-AI
 
 ---
 
-## 2. Install Backend
+## Install Backend
 
 ```bash
 cd server
-
 npm install
 ```
 
 ---
 
-## 3. Install Frontend
+## Install Frontend
 
 ```bash
 cd ../client
-
 npm install
 ```
 
@@ -163,18 +168,16 @@ npm install
 
 # 🔑 Environment Variables
 
-## Backend (`server/.env`)
+## Backend (.env)
 
 ```env
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 PORT=5000
 ```
 
----
+## Frontend (.env)
 
-## Frontend (`client/.env`)
-
-### Local Development
+### Local
 
 ```env
 VITE_API_URL=http://localhost:5000/api
@@ -194,29 +197,25 @@ VITE_API_URL=https://studygenie-backend-q6tk.onrender.com/api
 
 ```bash
 cd server
-
 npm start
 ```
-
----
 
 ## Frontend
 
 ```bash
 cd client
-
 npm run dev
 ```
 
-Frontend:
+Frontend
 
-```
+```text
 http://localhost:5173
 ```
 
-Backend:
+Backend
 
-```
+```text
 http://localhost:5000
 ```
 
@@ -224,21 +223,21 @@ http://localhost:5000
 
 # 🐳 Docker
 
-Build and run both frontend and backend using Docker Compose:
+Run the complete application using Docker Compose.
 
 ```bash
 docker compose up --build
 ```
 
-Frontend:
+Frontend
 
-```
+```text
 http://localhost:3000
 ```
 
-Backend:
+Backend
 
-```
+```text
 http://localhost:5000
 ```
 
@@ -246,50 +245,50 @@ http://localhost:5000
 
 # 🏗️ Architecture
 
-```
-                 User
-                   │
-                   ▼
-        React + Vite Frontend
-                   │
-              Axios Requests
-                   │
-                   ▼
-          Express.js Backend API
-                   │
-          Google Gemini API
-                   │
-                   ▼
-          AI Generated Response
-                   │
-                   ▼
-              React Interface
+```text
+             User
+               │
+               ▼
+      React + Vite Frontend
+               │
+         Axios HTTP Requests
+               │
+               ▼
+      Express.js Backend API
+               │
+      Google Gemini 2.5 Flash
+               │
+               ▼
+      AI Generated Response
+               │
+               ▼
+            React UI
 ```
 
 ---
 
 # 🔒 Security
 
-- API keys stored using environment variables
-- Gemini API key never exposed to the frontend
-- Backend acts as a secure middleware
-- CORS enabled
-- HTTPS deployment
-- Secrets excluded from Git using `.gitignore`
+- Environment Variables
+- Secure Backend API
+- Hidden Gemini API Key
+- HTTPS Deployment
+- CORS Enabled
+- `.gitignore` for Sensitive Files
 
 ---
 
 # 📦 Deployment
 
-### Frontend
+Frontend
 
 - Vercel
 
-### Backend
+Backend
 
 - Render
 
-The project is fully containerized and can be migrated to **AWS App Runner** with minimal configuration changes.
+The project is fully Dockerized and can be deployed to AWS App Runner after AWS account activation.
 
 ---
 
@@ -297,13 +296,12 @@ The project is fully containerized and can be migrated to **AWS App Runner** wit
 
 - User Authentication
 - Chat History
-- PDF Upload & Analysis
+- PDF Upload
 - Voice Input
-- Image Understanding
+- Image Analysis
 - Multi-language Support
 - Export Notes as PDF
 - Study Planner
-- User Profiles
 - AWS Deployment
 
 ---
@@ -320,6 +318,6 @@ IBM CSRBOX GenAI Vibe Coding Internship
 
 ---
 
-# ⭐ If you like this project
+## ⭐ Support
 
-Give this repository a ⭐ on GitHub!
+If you found this project useful, consider giving it a ⭐ on GitHub.

@@ -1,3 +1,4 @@
+````markdown
 # 🎓 StudyGenie AI
 
 <p align="center">
@@ -9,7 +10,7 @@
 </p>
 
 <p align="center">
-An AI-powered study assistant built with React, Node.js, Express, Google Gemini, Docker, and deployed on Amazon EC2.
+A modern AI-powered study assistant built with React, Node.js, Express, Google Gemini 2.5 Flash, Docker, and deployed on Amazon EC2.
 </p>
 
 ---
@@ -18,7 +19,7 @@ An AI-powered study assistant built with React, Node.js, Express, Google Gemini,
 
 ### 🌐 Live Application (AWS EC2)
 
-http://44.203.16.127
+**URL:** http://44.203.16.127
 
 ---
 
@@ -33,9 +34,9 @@ http://44.203.16.127
 - 🌊 Real-time Streaming AI Responses
 - 📱 Fully Responsive Design
 - 🔒 Secure Backend API
-- 🔐 Environment Variables for API Key Protection
+- 🔐 Environment Variable Protection
 - 🐳 Docker Containerization
-- ☁️ AWS EC2 Deployment
+- ☁️ AWS EC2 Cloud Deployment
 
 ---
 
@@ -44,7 +45,7 @@ http://44.203.16.127
 ## Landing Page
 
 <p align="center">
-<img src="./screenshots/landing-page.png" width="900">
+  <img src="./screenshots/landing-page.png" width="900">
 </p>
 
 ---
@@ -52,7 +53,7 @@ http://44.203.16.127
 ## Workspace
 
 <p align="center">
-<img src="./screenshots/workspace.png" width="900">
+  <img src="./screenshots/workspace.png" width="900">
 </p>
 
 ---
@@ -60,7 +61,15 @@ http://44.203.16.127
 ## AI Chat Assistant
 
 <p align="center">
-<img src="./screenshots/chat.png" width="900">
+  <img src="./screenshots/chat.png" width="900">
+</p>
+
+---
+
+## Real-time Streaming Response
+
+<p align="center">
+  <img src="./screenshots/streaming.png" width="900">
 </p>
 
 ---
@@ -68,7 +77,7 @@ http://44.203.16.127
 ## Notes Summarizer
 
 <p align="center">
-<img src="./screenshots/summary.png" width="900">
+  <img src="./screenshots/summary.png" width="900">
 </p>
 
 ---
@@ -76,15 +85,7 @@ http://44.203.16.127
 ## Quiz Generator
 
 <p align="center">
-<img src="./screenshots/quiz.png" width="900">
-</p>
-
----
-
-## Streaming Responses
-
-<p align="center">
-<img src="./screenshots/streaming.png" width="900">
+  <img src="./screenshots/quiz.png" width="900">
 </p>
 
 ---
@@ -247,22 +248,22 @@ http://localhost:5000
 # 🏗️ System Architecture
 
 ```text
-                User
-                  │
-                  ▼
-          React + Vite Frontend
-                  │
-         Axios HTTP Requests
-                  │
-                  ▼
-          Express.js Backend
-                  │
-                  ▼
-      Google Gemini 2.5 Flash API
-                  │
-      Streaming AI Response
-                  │
-                  ▼
+                 User
+                   │
+                   ▼
+        React + Vite Frontend
+                   │
+          Axios HTTP Requests
+                   │
+                   ▼
+         Express.js Backend API
+                   │
+                   ▼
+     Google Gemini 2.5 Flash API
+                   │
+      Streaming AI Responses
+                   │
+                   ▼
           React User Interface
 ```
 
@@ -270,17 +271,17 @@ http://localhost:5000
 
 # 🔒 Security
 
-- API keys stored using Environment Variables
-- Gemini API key hidden from frontend
-- Secure Backend API Routing
-- CORS Configuration
+- Environment Variables for API Keys
+- Secure Backend API
+- Hidden Gemini API Key
+- CORS Enabled
 - Sensitive files excluded using `.gitignore`
 
 ---
 
 # 📦 AWS Deployment
 
-The application is deployed on an Amazon EC2 instance using Docker and Docker Compose.
+The application is deployed on an **Amazon EC2** instance using **Docker** and **Docker Compose**.
 
 Deployment includes:
 
@@ -290,7 +291,7 @@ Deployment includes:
 - Environment Variable Configuration
 - Public AWS Access
 
-Live URL:
+**Live URL**
 
 http://44.203.16.127
 
@@ -302,7 +303,7 @@ http://44.203.16.127
 - Chat History
 - PDF Upload & Analysis
 - Voice Input
-- Image Understanding
+- Image Analysis
 - Multi-language Support
 - Export Notes as PDF
 - Study Planner
@@ -325,3 +326,4 @@ IBM CSRBOX GenAI Vibe Coding Internship
 ## ⭐ Support
 
 If you found this project useful, consider giving it a ⭐ on GitHub.
+````

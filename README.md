@@ -4,26 +4,21 @@
   <img src="https://img.shields.io/badge/React-19-blue?logo=react" />
   <img src="https://img.shields.io/badge/Node.js-Express-green?logo=node.js" />
   <img src="https://img.shields.io/badge/Google-Gemini-orange?logo=google" />
-  <img src="https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel" />
-  <img src="https://img.shields.io/badge/Render-Backend-46E3B7?logo=render" />
+  <img src="https://img.shields.io/badge/AWS-EC2-FF9900?logo=amazonaws" />
   <img src="https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker" />
 </p>
 
 <p align="center">
-A modern AI-powered study assistant built with React, Node.js, Express, and Google Gemini.
+An AI-powered study assistant built with React, Node.js, Express, Google Gemini, Docker, and deployed on Amazon EC2.
 </p>
 
 ---
 
 # 🚀 Live Demo
 
-### 🌐 Frontend
+### 🌐 Live Application (AWS EC2)
 
-https://study-genie-ai-orpin.vercel.app/
-
-### ⚙️ Backend API
-
-https://studygenie-backend-q6tk.onrender.com
+http://44.203.16.127
 
 ---
 
@@ -34,12 +29,13 @@ https://studygenie-backend-q6tk.onrender.com
 - ❓ Quiz Generator
 - 🧠 Flashcard Generator
 - 💡 AI Concept Explainer
-- ⚡ Gemini 2.5 Flash Integration
+- ⚡ Google Gemini 2.5 Flash Integration
+- 🌊 Real-time Streaming AI Responses
 - 📱 Fully Responsive Design
 - 🔒 Secure Backend API
-- 🐳 Docker Support
-- ☁️ Cloud Deployment
-- 🚀 AWS Ready
+- 🔐 Environment Variables for API Key Protection
+- 🐳 Docker Containerization
+- ☁️ AWS EC2 Deployment
 
 ---
 
@@ -85,6 +81,14 @@ https://studygenie-backend-q6tk.onrender.com
 
 ---
 
+## Streaming Responses
+
+<p align="center">
+<img src="./screenshots/streaming.png" width="900">
+</p>
+
+---
+
 # 🛠️ Tech Stack
 
 ## Frontend
@@ -105,17 +109,13 @@ https://studygenie-backend-q6tk.onrender.com
 - dotenv
 - CORS
 
-## AI
+## AI Model
 
 - Google Gemini 2.5 Flash API
 
 ## Deployment
 
-- Vercel
-- Render
-
-## Containerization
-
+- Amazon EC2
 - Docker
 - Docker Compose
 
@@ -129,6 +129,7 @@ StudyGenie-AI/
 ├── client/
 ├── server/
 ├── screenshots/
+├── docs/
 ├── docker-compose.yml
 ├── README.md
 └── .gitignore
@@ -177,16 +178,16 @@ PORT=5000
 
 ## Frontend (.env)
 
-### Local
+### Local Development
 
 ```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
-### Production
+### AWS Deployment
 
 ```env
-VITE_API_URL=https://studygenie-backend-q6tk.onrender.com/api
+VITE_API_URL=http://YOUR_EC2_PUBLIC_IP:5000/api
 ```
 
 ---
@@ -221,18 +222,18 @@ http://localhost:5000
 
 ---
 
-# 🐳 Docker
+# 🐳 Docker Deployment
 
 Run the complete application using Docker Compose.
 
 ```bash
-docker compose up --build
+docker compose up --build -d
 ```
 
 Frontend
 
 ```text
-http://localhost:3000
+http://localhost
 ```
 
 Backend
@@ -243,52 +244,55 @@ http://localhost:5000
 
 ---
 
-# 🏗️ Architecture
+# 🏗️ System Architecture
 
 ```text
-             User
-               │
-               ▼
-      React + Vite Frontend
-               │
+                User
+                  │
+                  ▼
+          React + Vite Frontend
+                  │
          Axios HTTP Requests
-               │
-               ▼
-      Express.js Backend API
-               │
-      Google Gemini 2.5 Flash
-               │
-               ▼
-      AI Generated Response
-               │
-               ▼
-            React UI
+                  │
+                  ▼
+          Express.js Backend
+                  │
+                  ▼
+      Google Gemini 2.5 Flash API
+                  │
+      Streaming AI Response
+                  │
+                  ▼
+          React User Interface
 ```
 
 ---
 
 # 🔒 Security
 
-- Environment Variables
-- Secure Backend API
-- Hidden Gemini API Key
-- HTTPS Deployment
-- CORS Enabled
-- `.gitignore` for Sensitive Files
+- API keys stored using Environment Variables
+- Gemini API key hidden from frontend
+- Secure Backend API Routing
+- CORS Configuration
+- Sensitive files excluded using `.gitignore`
 
 ---
 
-# 📦 Deployment
+# 📦 AWS Deployment
 
-Frontend
+The application is deployed on an Amazon EC2 instance using Docker and Docker Compose.
 
-- Vercel
+Deployment includes:
 
-Backend
+- React Frontend Container
+- Express Backend Container
+- Google Gemini API Integration
+- Environment Variable Configuration
+- Public AWS Access
 
-- Render
+Live URL:
 
-The project is fully Dockerized and can be deployed to AWS App Runner after AWS account activation.
+http://44.203.16.127
 
 ---
 
@@ -296,13 +300,13 @@ The project is fully Dockerized and can be deployed to AWS App Runner after AWS 
 
 - User Authentication
 - Chat History
-- PDF Upload
+- PDF Upload & Analysis
 - Voice Input
-- Image Analysis
+- Image Understanding
 - Multi-language Support
 - Export Notes as PDF
 - Study Planner
-- AWS Deployment
+- HTTPS with Custom Domain
 
 ---
 

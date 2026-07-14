@@ -1,4 +1,3 @@
-````markdown
 # 🎓 StudyGenie AI
 
 <p align="center">
@@ -10,7 +9,7 @@
 </p>
 
 <p align="center">
-A modern AI-powered study assistant built with React, Node.js, Express, Google Gemini 2.5 Flash, Docker, and deployed on Amazon EC2.
+An AI-powered study assistant built with React, Node.js, Express, Google Gemini 2.5 Flash, Docker, and deployed on Amazon EC2.
 </p>
 
 ---
@@ -130,6 +129,12 @@ StudyGenie-AI/
 ├── client/
 ├── server/
 ├── screenshots/
+│   ├── landing-page.png
+│   ├── workspace.png
+│   ├── chat.png
+│   ├── streaming.png
+│   ├── summary.png
+│   └── quiz.png
 ├── docs/
 ├── docker-compose.yml
 ├── README.md
@@ -287,7 +292,7 @@ Deployment includes:
 
 - React Frontend Container
 - Express Backend Container
-- Google Gemini API Integration
+- Google Gemini 2.5 Flash Integration
 - Environment Variable Configuration
 - Public AWS Access
 
@@ -326,4 +331,3 @@ IBM CSRBOX GenAI Vibe Coding Internship
 ## ⭐ Support
 
 If you found this project useful, consider giving it a ⭐ on GitHub.
-````

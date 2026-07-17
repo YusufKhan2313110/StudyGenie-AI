@@ -18,7 +18,7 @@ An AI-powered study assistant built with React, Node.js, Express, Google Gemini 
 
 ### 🌐 Live Application (AWS EC2)
 
-**URL:** http://44.203.16.127
+**URL:** http://studygenie-ai.duckdns.org/
 
 ---
 
@@ -298,7 +298,7 @@ Deployment includes:
 
 **Live URL**
 
-http://44.203.16.127
+http://studygenie-ai.duckdns.org/
 
 ---
 
